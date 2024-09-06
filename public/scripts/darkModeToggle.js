@@ -14,7 +14,7 @@ const iconToggle = () => {
 
 // Checks for theme on system or browser
 function themeCheck() {
-	if (userTheme === "dark" || !(userTheme && systemTheme)) {
+	if (userTheme === "dark" || systemTheme || !userTheme) {
 		document.documentElement.classList.add("dark");
 		sunDisabledIcon.classList.add("hidden");
 		return;
